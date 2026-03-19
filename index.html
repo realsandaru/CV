@@ -49,14 +49,17 @@
 
         .art-bottom-left {
             position: absolute;
-            bottom: 5%;
-            left: 2%;
-            width: 450px; /* Made this one bigger as requested */
-            height: 450px;
-            background-image: url('lotr.png');
+            /* This pushes the image to the absolute bottom, removing the gap */
+            bottom: -15px; 
+            left: -20px;
+            /* Made this significantly bigger as requested */
+            width: 580px; 
+            height: 350px;
+            background-image: url('YOUR_LOTR_IMAGE_FILENAME'); /* Ensure your filename matches */
             background-size: contain;
             background-repeat: no-repeat;
-            opacity: 0.06;
+            /* Slightly lower opacity so it doesn't distract from the main text */
+            opacity: 0.05; 
         }
 
         /* Navigation */
