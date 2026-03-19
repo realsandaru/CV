@@ -32,7 +32,7 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            pointer-events: none; /* Allows clicking on buttons "through" the images */
+            pointer-events: none;
         }
 
         .art-top-right {
@@ -44,21 +44,18 @@
             background-image: url('starwars.png');
             background-size: contain;
             background-repeat: no-repeat;
-            opacity: 0.08; /* Subtle watermark effect */
+            opacity: 0.08;
         }
 
         .art-bottom-left {
-            /* Changing from absolute to fixed ensures it stays at the screen's bottom */
             position: fixed; 
             bottom: 0; 
             left: 0;
-            /* Keeping your requested larger size */
             width: 600px; 
             height: 350px;
             background-image: url('lotr.png');
             background-size: contain;
             background-repeat: no-repeat;
-            /* Aligning the image to the bottom of its own container */
             background-position: bottom left; 
             opacity: 0.05;
             z-index: -1;
@@ -92,7 +89,19 @@
             padding: 0 20px;
         }
 
-        h1 { font-size: 3.5rem; color: var(--primary); margin: 0 0 15px 0; }
+        /* Profile Image Styling */
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        /* Added margin-top to h1 to bring the name and department down */
+        h1 { font-size: 3.5rem; color: var(--primary); margin: 20px 0 15px 0; }
         p { max-width: 650px; font-size: 1.25rem; color: var(--text-muted); margin-bottom: 30px; }
         
         .btn { 
@@ -111,9 +120,9 @@
             box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
         }
 
-        /* Mobile Adjustments */
         @media (max-width: 768px) {
             h1 { font-size: 2.5rem; }
+            .profile-img { width: 140px; height: 140px; }
             .art-bottom-left { width: 250px; height: 250px; }
             .art-top-right { width: 180px; height: 180px; }
         }
@@ -135,10 +144,12 @@
     </nav>
 
     <div class="hero">
+        <img src="sandaru.jpg" alt="Sandaru Navin Herath" class="profile-img">
+        
         <h1>Sandaru Navin Herath</h1>
         <p>
             Undergraduate at the 
-            Electronic and Telecommunication Engineering Department
+            Electronic and Telecommunication Engineering Department<br>
             University of Moratuwa, Sri Lanka
         </p>
         <a href="cv.html" class="btn">View My CV</a>
