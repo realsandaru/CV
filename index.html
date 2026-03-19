@@ -48,18 +48,20 @@
         }
 
         .art-bottom-left {
-            position: absolute;
-            /* This pushes the image to the absolute bottom, removing the gap */
-            bottom: 0px; 
-            left: 0px;
-            /* Made this significantly bigger as requested */
-            width: 580px; 
+            /* Changing from absolute to fixed ensures it stays at the screen's bottom */
+            position: fixed; 
+            bottom: 0; 
+            left: 0;
+            /* Keeping your requested larger size */
+            width: 600px; 
             height: 350px;
-            background-image: url('lotr.png'); /* Ensure your filename matches */
+            background-image: url('lotr.png');
             background-size: contain;
             background-repeat: no-repeat;
-            /* Slightly lower opacity so it doesn't distract from the main text */
-            opacity: 0.05; 
+            /* Aligning the image to the bottom of its own container */
+            background-position: bottom left; 
+            opacity: 0.05;
+            z-index: -1;
         }
 
         /* Navigation */
